@@ -22,7 +22,10 @@ config :novy_web, NovyWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "OhdvPqGCuXi6vVKDi/sOYUS+ggJJt4P1t7qn/xqbnSmtpR8LYVhZ2wmlEitBPJch",
   render_errors: [view: NovyWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: NovyWeb.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: NovyWeb.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [
+    signing_salt: "fabeBRWHIsx8j8WxNmeTW2lfqSIB59kO"
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,

@@ -1,6 +1,8 @@
 defmodule NovyWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :novy_web
 
+  socket "/live", Phoenix.LiveView.Socket
+
   socket "/socket", NovyWeb.UserSocket,
     websocket: true,
     longpoll: false

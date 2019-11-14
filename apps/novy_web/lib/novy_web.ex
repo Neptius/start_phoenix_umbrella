@@ -24,6 +24,8 @@ defmodule NovyWeb do
       import Plug.Conn
       import NovyWeb.Gettext
       import NovyWeb.Auth, only: [authenticate_user: 2]
+      import Phoenix.LiveView.Controller
+
       alias NovyWeb.Router.Helpers, as: Routes
     end
   end
@@ -42,6 +44,11 @@ defmodule NovyWeb do
 
       import NovyWeb.ErrorHelpers
       import NovyWeb.Gettext
+
+      import Phoenix.LiveView,
+        only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2,
+              live_component: 2, live_component: 3, live_component: 4]
+
       alias NovyWeb.Router.Helpers, as: Routes
     end
   end
@@ -52,6 +59,7 @@ defmodule NovyWeb do
       import Plug.Conn
       import Phoenix.Controller
       import NovyWeb.Auth, only: [authenticate_user: 2]
+      import Phoenix.LiveView.Router
     end
   end
 

@@ -45,7 +45,9 @@ defmodule NovyWeb.MixProject do
       {:gettext, "~> 0.11"},
       {:novy, in_umbrella: true},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:phoenix_live_view, github: "phoenixframework/phoenix_live_view"},
+      {:floki, ">= 0.0.0", only: :test}
     ]
   end
 
