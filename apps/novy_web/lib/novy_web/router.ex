@@ -22,6 +22,12 @@ defmodule NovyWeb.Router do
     resources "/users", UserController, only: [:index, :show, :new, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
     get "/watch/:id", WatchController, :show
+
+    
+    live "/videos", VideoLive.Index
+    live "/videos/new", VideoLive.New
+    live "/videos/:id", VideoLive.Show
+    live "/videos/:id/edit", VideoLive.Edit
   end
 
   scope "/manage", NovyWeb do

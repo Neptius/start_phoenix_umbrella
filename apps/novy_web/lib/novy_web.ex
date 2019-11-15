@@ -46,8 +46,15 @@ defmodule NovyWeb do
       import NovyWeb.Gettext
 
       import Phoenix.LiveView,
-        only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2,
-              live_component: 2, live_component: 3, live_component: 4]
+        only: [
+          live_render: 2,
+          live_render: 3,
+          live_link: 1,
+          live_link: 2,
+          live_component: 2,
+          live_component: 3,
+          live_component: 4
+        ]
 
       alias NovyWeb.Router.Helpers, as: Routes
     end
