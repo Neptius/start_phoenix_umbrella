@@ -1,4 +1,4 @@
-defmodule NovyWeb.VideoLive.Index do
+defmodule NovyWeb.VideoLive.Show do
   use Phoenix.LiveView
 
   def render(assigns) do

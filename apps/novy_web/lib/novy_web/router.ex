@@ -24,9 +24,9 @@ defmodule NovyWeb.Router do
     get "/watch/:id", WatchController, :show
 
     
-    live "/videos", VideoLive.Index
-    live "/videos/new", VideoLive.New
+    live "/videos", VideoLive.Index, session: [:user_id]
     live "/videos/:id", VideoLive.Show
+    live "/videos/new", VideoLive.New
     live "/videos/:id/edit", VideoLive.Edit
   end
 

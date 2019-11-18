@@ -7,6 +7,7 @@ defmodule NovyWeb.VideoController do
   plug :load_categories when action in [:new, :create, :edit, :update]
 
   def index(conn, _params, current_user) do
+    IO.inspect(current_user)
     videos = Multimedia.list_user_videos(current_user)
     render(conn, "index.html", videos: videos)
   end
